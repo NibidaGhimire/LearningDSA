@@ -1,0 +1,13 @@
+
+-- 
+FULL BINARY TREE 
+    Parent has either two or no children
+--
+COMPLETE BINARY TREE
+    Every level filled except last and single node of last level is in the left
+--
+PERFECT BINARY TREE
+    Each internal node has two child + all leaf at same level
+--
+DEGENERATE BINARY TREE
+    ONE PARENT = AT MOST ONE CHILD
