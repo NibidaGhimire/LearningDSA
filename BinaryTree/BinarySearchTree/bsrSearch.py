@@ -22,7 +22,7 @@ class BinarySearchTree:
         
     #Time Complexity : 
         #Best TC : O(1)
-        #Worst TC : O(n)
+        #Worst TC : O(h)
 
 bst= BinarySearchTree()
 

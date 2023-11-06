@@ -26,7 +26,6 @@ class BinarySearchTree:
             
             else:
                 self.insert(value,current_node.left)
-
         elif value>current_node.data:
 
             if current_node.right is None:
@@ -36,7 +35,9 @@ class BinarySearchTree:
             else:
                 self.insert(value,current_node.right)
 
-        
+    #Time Complexity : O(h)
+   
+
     def search(self, value, current_node=None):
         if not self.root:
             return None 
@@ -56,6 +57,8 @@ class BinarySearchTree:
             if current_node.right is None:
                 return None
             return self.search(value,current_node.right)
+    
+    #Time Complexity : O(h)
 
 
     def delete(self, root, key):
@@ -87,6 +90,8 @@ class BinarySearchTree:
 
         return root
         
+    #Time Complexity : O(h)
+
 
     def inorder_traversal(self, node, visited_nodes=None):
         if visited_nodes is None:
