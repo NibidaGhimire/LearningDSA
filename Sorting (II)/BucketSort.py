@@ -9,26 +9,22 @@ def selection_sort(lst):
 
     return lst
 
-def bucket_sort(lst):
-    bucket1=[]
-    bucket2=[]
-    bucket3=[]
-
-    for value in lst:
-        if 0<=value<5:
-            bucket1.append(value)
-        elif 5<=value<10:
-            bucket2.append(value)
-        else:
-            bucket3.append(value)
-
-    bucket1=selection_sort(bucket1)
-    bucket2=selection_sort(bucket2)
-    bucket3=selection_sort(bucket3)
-
-    sortedlist=bucket1+bucket2+bucket3
-    return sortedlist
-
-
-lst = list(map(int, input().split()))
-print(bucket_sort(lst))
+def bucket_sort(lst,bucket_range):
+    
+    buckets = [[] for _ in bucket_range]
+    
+    for index, brange in enumerate(bucket_range):
+        for num in lst:
+            if brange[0] <= num < brange[1]:
+                buckets[index].append(num)
+ 
+    sorted_list = []
+    for bucket in buckets:
+        bucket = selection_sort(bucket)
+        sorted_list.extend(bucket)
+    
+    return sorted_list
+ 
+lst = [10, 8, 2, 1, 12, 7, 6, 14, 11, 4] 
+bucket_range = [(0, 5), (5, 10), (10, 15)]
+print(f"Sorted List: {bucket_sort(lst, bucket_range)}")
