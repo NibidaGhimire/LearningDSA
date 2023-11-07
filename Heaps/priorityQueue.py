@@ -105,7 +105,18 @@ class PriorityQueue(MinHeap):
                 else:
                     self.heapify_down(i)
         return self.heap
+    
+# Time Complexity for insertion: O(logn)
+
+# Time Complexity for peek: O(1)
+
+# Time Complexity for extract min: O(logn)
+
+# Time Complexity for change key: O(n)
+
 priority_queue = PriorityQueue()
+
+
 
 tasks = [(12, 'Task1'), (15, 'Task2'), (25, 'Task3'), (16, 'Task4'), (5, 'Task5')]
 print('Insert tasks into priority queue')
